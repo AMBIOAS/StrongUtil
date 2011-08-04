@@ -1,7 +1,6 @@
+
+
 package no.strong.util;
-
-
-
 
 
 import java.util.Calendar;
@@ -13,15 +12,7 @@ import java.util.Date;
  * @author fredpallesen
  *
  */
-
 public class DT {
-
-	/**
-	 * number of years between two dates
-	 * @param first date
-	 * @param last date
-	 * @return diff years
-	 */
 	public static int years( Date first, Date last ) {
 		int diff = 0;
 		boolean swap = false;
@@ -65,17 +56,14 @@ public class DT {
 		Calendar l = Calendar.getInstance();
 		f.setTime(first);
 		l.setTime(last);
-		int mDiff = l.get(Calendar.MONTH) - f.get(Calendar.MONTH);
-		return mDiff;
+		int yDiff = years(first, last);
+		int dDiff = l.get(Calendar.DAY_OF_YEAR) - f.get(Calendar.DAY_OF_YEAR);
+		return (yDiff * 365) + dDiff;
 	}
 
 	public static Date date( int y, int m, int d ) {
 		Calendar c = Calendar.getInstance();
 		c.set(y, m - 1, d, 0, 0, 0);
 		return c.getTime();
-	}
-	
-	public static String formatDate(Date date){
-		return date.toString().substring(0, 10);
 	}
 }
