@@ -66,11 +66,15 @@ public class DT {
 		c.set(y, m - 1, d, 0, 0, 0);
 		return c.getTime();
 	}
-	
+
 	public static Date date( int y, int m, int d, int hours, int minutes ) {
 		Calendar c = Calendar.getInstance();
 		c.set(y, m - 1, d, hours, minutes, 0);
 		return c.getTime();
 	}
-	
+
+	public static Date date( int y, int m, int d, String hmin ) {
+		String[] hm = hmin.split(":");
+		return date(y, m, d, (new Integer(hm[0])), (new Integer(hm[1])));
+	}
 }
