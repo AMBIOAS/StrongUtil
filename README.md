@@ -23,6 +23,6 @@ code available online.
 
 Contact Information
 --------------------------------
-Strong Nett AS
-http://www.strong.no
-strong@strong.no
+	Strong Nett AS
+	http://www.strong.no
+	strong@strong.no
