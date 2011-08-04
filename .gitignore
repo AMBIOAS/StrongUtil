@@ -1,0 +1,10 @@
+# ignore output files
+bin
+
+# ignore eclipse files
+.settings
+.project
+.classpath
+
+# ignore file created by the Macintosh OS X Finder
+.DS_Store
